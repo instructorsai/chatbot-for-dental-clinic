@@ -34,6 +34,20 @@
       border: none;
     }
 
+    .chatbot-box {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chatbot-name {
+      font-weight: bold;
+    }
+
     .footer {
       text-align: center;
       padding: 1rem;
@@ -43,19 +57,37 @@
 <body>
   <div class="header">
     <h1>Welcome to our Chatbot Service</h1>
-    <p>Your AI-powered virtual assistant</p>
+    <p>InstructorsAI-powered virtual assistant</p>
   </div>
 
   <div class="chatbot-container">
-    <h2>Chat with our Bot</h2>
-    <iframe class="chatbot-frame">
-      <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
-      <script src="https://mediafiles.botpress.cloud/a6240f15-a267-47c4-ba2e-d723c803213f/webchat/config.js" defer></script>
-    </iframe>
+    <div class="chatbot-box">
+      <span class="chatbot-name">Chatbot-1</span>
+      <a href="https://mediafiles.botpress.cloud/a6240f15-a267-47c4-ba2e-d723c803213f/webchat/bot.html" target="_blank" rel="noopener noreferrer">InstructorsAI - Chatbot </a>
+    </div>
+    <iframe class="chatbot-frame" id="chatbot-iframe"></iframe>
   </div>
 
   <div class="footer">
-    <p>&copy; 2023 Chatbot Service. All rights reserved.</p>
+     Contact Email: ketan@instructorsai.com
+    <p>&copy; 2023 InstructorsAI Chatbot Service. All rights reserved.</p>
   </div>
+
+  <script>
+    const iframe = document.getElementById("chatbot-iframe");
+    iframe.onload = function() {
+      const iframeDocument = iframe.contentWindow.document;
+      
+      const injectScript = iframeDocument.createElement("script");
+      injectScript.src = "https://cdn.botpress.cloud/webchat/v0/inject.js";
+      
+      const configScript = iframeDocument.createElement("script");
+      configScript.src = "https://mediafiles.botpress.cloud/a6240f15-a267-47c4-ba2e-d723c803213f/webchat/config.js";
+      configScript.defer = true;
+      
+      iframeDocument.head.appendChild(injectScript);
+      iframeDocument.head.appendChild(configScript);
+    };
+  </script>
 </body>
 </html>
