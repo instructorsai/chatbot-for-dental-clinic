@@ -46,6 +46,13 @@
 
     .chatbot-name {
       font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .chatbot-icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
     }
 
     .footer {
@@ -62,9 +69,22 @@
 
   <div class="chatbot-container">
     <div class="chatbot-box">
-      <span class="chatbot-name">Chatbot-1</span>
+      <span class="chatbot-name">
+        <span class="chatbot-icon">&#x1F916;</span> <!-- Chatbot Icon -->
+        Chatbot-1
+      </span>
       <a href="https://mediafiles.botpress.cloud/a6240f15-a267-47c4-ba2e-d723c803213f/webchat/bot.html" target="_blank" rel="noopener noreferrer">InstructorsAI - Chatbot </a>
     </div>
+    
+    <!-- Chatbot-2 Box -->
+    <div class="chatbot-box">
+      <span class="chatbot-name">
+        <span class="chatbot-icon">&#x1F916;</span> <!-- Chatbot Icon -->
+        Chatbot-2
+      </span>
+      <a href="https://example.com/chatbot2" target="_blank" rel="noopener noreferrer">Chatbot 2 - Another Chatbot </a>
+    </div>
+
     <iframe class="chatbot-frame" id="chatbot-iframe"></iframe>
   </div>
 
