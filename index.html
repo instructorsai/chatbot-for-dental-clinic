@@ -10,7 +10,22 @@
 
   <script>
     // Replace with the script provided by your chatbot service
-    
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "InstructorsAI",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "a6240f15-a267-47c4-ba2e-d723c803213f",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "a6240f15-a267-47c4-ba2e-d723c803213f",
+      "botName": "InstructorsAI",
+      "avatarUrl": "https://cdn2.iconfinder.com/data/icons/artificial-intelligence-6/64/ArtificialIntelligence3-512.png",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/3158e955-4a97-42dc-b8a7-c6a5d9c9b083/v21412/style.css",
+      "useSessionStorage": true,
+      "showPoweredBy": true
+  });
+</script>
     // Make sure to follow the chatbot service's instructions for embedding
     (function() {
       var chatbotContainer = document.getElementById("chatbot-container");
