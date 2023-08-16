@@ -3,34 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbot Showcase</title>
+  <title>My Awesome Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .chatbot-container {
+      width: 400px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .chatbot-header {
+      padding: 12px 16px;
+      background-color: #007BFF;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <div id="chatbot-container"></div>
+  <div class="chatbot-container">
+    <div class="chatbot-header">My Awesome Chatbot</div>
+    <div id="chatbot"></div>
+  </div>
 
   <script>
-    // Replace with the script provided by your chatbot service
-    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
-      "composerPlaceholder": "InstructorsAI",
-      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
-      "botId": "a6240f15-a267-47c4-ba2e-d723c803213f",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "a6240f15-a267-47c4-ba2e-d723c803213f",
-      "botName": "InstructorsAI",
-      "avatarUrl": "https://cdn2.iconfinder.com/data/icons/artificial-intelligence-6/64/ArtificialIntelligence3-512.png",
-      "stylesheet": "https://webchat-styler-css.botpress.app/prod/3158e955-4a97-42dc-b8a7-c6a5d9c9b083/v21412/style.css",
-      "useSessionStorage": true,
-      "showPoweredBy": true
-  });
-</script>
-    // Make sure to follow the chatbot service's instructions for embedding
-    (function() {
-      var chatbotContainer = document.getElementById("chatbot-container");
-      // Replace the following line with the script provided by your chatbot service
-      // Example: chatbotContainer.innerHTML = '<script src="URL_TO_CHATBOT_SCRIPT"></script>';
+    (function () {
+      var chatbotContainer = document.getElementById("chatbot");
+      var injectScript = document.createElement("script");
+      injectScript.src = "https://cdn.botpress.cloud/webchat/v0/inject.js";
+      var configScript = document.createElement("script");
+      configScript.src = "https://mediafiles.botpress.cloud/a6240f15-a267-47c4-ba2e-d723c803213f/webchat/config.js";
+      configScript.defer = true;
+      chatbotContainer.appendChild(injectScript);
+      chatbotContainer.appendChild(configScript);
     })();
   </script>
 </body>
