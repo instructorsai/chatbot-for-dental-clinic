@@ -118,5 +118,21 @@
       iframeDocument.head.appendChild(configScript);
     };
   </script>
+<!-- This is For VoiceFlow Bot for real estate-->
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '64e5ce9a644bc10007c076ec' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+  
 </body>
 </html>
